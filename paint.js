@@ -22,8 +22,8 @@ window.addEventListener("load", () => {
   function draw(e) {
     if (!painting) return;
 
-    context.strokeStyle = color;
-    context.lineWidth = penSize;
+    context.strokeStyle = color; //var color
+    context.lineWidth = penSize; //var size
     context.lineCap = "round";
 
     let x = e.offsetX;
@@ -36,7 +36,9 @@ window.addEventListener("load", () => {
   }
 
   canvas.addEventListener("mousedown", start);
+
   canvas.addEventListener("mouseup", finish);
+  
   canvas.addEventListener("mousemove", draw);
 });
 
