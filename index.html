@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>paint project</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./paint.js" defer></script>
+  </head>
+  <body>
+    <h1 class="title">Paint using js</h1>
+    <main id="wrapper">
+      <section class="tools">
+        <ul class="all-color">
+          <!-- color palate -->
+          <li
+            class="color color-1"
+            data-value="red"
+            onclick="selectColor(this)"
+          ></li>
+          <li
+            class="color color-2"
+            data-value="blue"
+            onclick="selectColor(this)"
+          ></li>
+          <li
+            class="color color-3"
+            data-value="green"
+            onclick="selectColor(this)"
+          ></li>
+          <li
+            class="color color-4"
+            data-value="white"
+            onclick="selectColor(this)"
+          ></li>
+          <li
+            class="color color-5"
+            data-value="yellow"
+            onclick="selectColor(this)"
+          ></li>
+          <li
+            class="color color-6"
+            data-value="pink"
+            onclick="selectColor(this)"
+          ></li>
+
+          <!-- tools -->
+          <label for="size">pensize:</label>
+          <input
+            type="range"
+            name="size"
+            id="size"
+            min="2"
+            max="40"
+            step="5"
+            value="5"
+            onchange="penSizeChanging(this.value)"
+          />
+
+          <!-- select color -->
+          <li>
+            <label for="pick-color">pick color:</label>
+            <input
+              id="pick-color"
+              name="pick-color"
+              type="color"
+              value="#FF1493"
+              onchange="pickedColorChange(this)"
+            />
+          </li>
+
+          <!-- download art -->
+          <li>
+            <label for="down-load">download:</label>
+            <a
+              href="#"
+              id="down-load"
+              name="down-load"
+              download="paint.png"
+              name="links"
+              ><i class="fa-solid fa-download fa-lg"></i
+            ></a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- canvas elem -->
+      <canvas id="canvas" width="1000" height="700"></canvas>
+    </main>
+    <footer>
+      <h3>socials</h3>
+      <h1 class="link">
+        ---
+        <a href="https://github.com/shrix1" class="links" target="_blank"
+          ><i class="fa-brands fa-github-square fa-1x"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/shriprasanna-b-62aab1208/"
+          target="_blank"
+          class="links"
+          ><i class="fa-brands fa-linkedin fa-1x"></i
+        ></a>
+        ---
+      </h1>
+    </footer>
+  </body>
+</html>
