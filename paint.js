@@ -36,9 +36,7 @@ window.addEventListener("load", () => {
   }
 
   canvas.addEventListener("mousedown", start);
-
   canvas.addEventListener("mouseup", finish);
-  
   canvas.addEventListener("mousemove", draw);
 });
 
