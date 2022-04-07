@@ -10,6 +10,7 @@ body {
 #canvas {
   border: 2px solid #000;
   border-radius: 8px;
+  background-color: rgb(0, 0, 0);
 }
 .title {
   text-align: center;
@@ -50,7 +51,7 @@ label {
   font-size: 20px;
   font-weight: 600;
 }
-.color {
+.color ,#eraser{
   width: 30px;
   height: 30px;
   border-radius: 4px;
@@ -103,7 +104,6 @@ h3 {
   text-align: center;
   margin-top: 5px;
 }
-
 @media (max-width:1250px) {
   #wrapper{
     width: 1000px;
