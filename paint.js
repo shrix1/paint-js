@@ -1,6 +1,7 @@
 //var
 const allColor = document.querySelectorAll(".color");
 const clear = document.querySelector("#eraser").addEventListener("click",eraser);
+const clearFullCanvas = document.querySelector("#trash").addEventListener("click", clearCanvas);
 let color = "lightBlue";
 let penSize = 5;
 let painting = false;
@@ -64,10 +65,15 @@ function pickedColorChange(col) {
   color = col.value;
 }
 
-eraser
+// eraser
 function eraser(){
   penSize = 10
   color = "black";
+}
+
+//clearCanvas
+function clearCanvas(){
+  location.reload()  //bad idea
 }
 
 //download your art

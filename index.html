@@ -32,7 +32,17 @@
           <li class="color color-4" data-value="white" onclick="selectColor(this)"></li>
           <li class="color color-5" data-value="yellow" onclick="selectColor(this)"></li>
           <li class="color color-6"  data-value="pink" onclick="selectColor(this)"></li>
-        
+          
+           <!-- eraser -->
+           <li>
+            <button id="eraser"><i class="fa-solid fa-eraser"></i></button>
+          </li>
+          
+          <!-- clear canvas -->
+          <li>
+            <button id="trash"><i class="fa-solid fa-trash"></i></button>
+          </li>
+
           <!-- tools -->
           <li>
           <label for="size">pensize:</label>
@@ -45,11 +55,6 @@
             <input id="pick-color" name="pick-color" type="color"value="#FF1493"onchange="pickedColorChange(this)"  />
           </li>
  
-           <!-- eraser -->
-          <li>
-            <button id="eraser"><i class="fa-solid fa-eraser"></i></button>
-          </li>
-
           <!-- download art -->
           <li>
             <label for="down-load">download:</label>
