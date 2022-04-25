@@ -12,17 +12,17 @@ window.addEventListener("load", () => {
   const canvas = document.querySelector("#canvas");
   const context = canvas.getContext("2d");
 
-  function start(e) {
+  const start = e => {
     painting = true;
     draw(e);
   }
 
-  function finish() {
+  const finish = () => {
     painting = false;
     context.beginPath();
   }
 
-  function draw(e) {
+  const draw = e => {
     if (!painting) return;
 
     context.strokeStyle = color; //var color
@@ -44,35 +44,35 @@ window.addEventListener("load", () => {
 });
 
 //active button and get colors
-function selectColor(e) {
+const selectColor = e => {
   removeActive();
   color = e.getAttribute("data-value");
   e.classList.add("active");
 }
-function removeActive() {
+const removeActive =()=> {
   allColor.forEach((c) => {
     c.classList.remove("active");
   });
 }
 
 //sizeof the pen
-function penSizeChanging(size) {
+const penSizeChanging= (size)=> {
   penSize = size;
 }
 
 //pick color
-function pickedColorChange(col) {
+const pickedColorChange=(col)=> {
   color = col.value;
 }
 
 // eraser
-function eraser(){
+const eraser=()=>{
   penSize = 10
   color = "black";
 }
 
 //clearCanvas
-function clearCanvas(){
+const clearCanvas=()=>{
   location.reload()  //bad idea
 }
 
